@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>El Manzanillo — Blairsville, NJ</title>
+<meta name="description" content="El Manzanillo in Blairsville, NJ. Trusted restaurants serving Blairsville and surrounding NJ. Call Message via chat → or book online.">
+<meta name="theme-color" content="#ff6b35">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"El Manzanillo","image":"","address":{"@type":"PostalAddress","streetAddress":"","addressLocality":"Blairsville","addressRegion":"NJ","postalCode":"","addressCountry":"US"},"telephone":"Message via chat →","url":"","priceRange":"$$","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"25"},"openingHours":"Mo-Fr 09:00-17:00"}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+:root{--accent:#ff6b35;--accent-deep:#ff5a1f;--bg:#0a0c10;--ink:#f5f5f7;--ink-2:rgba(245,245,247,.72);--line:rgba(255,255,255,.08)}
+body{font-family:'Inter Tight',-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;letter-spacing:-.01em}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;background:rgba(10,12,16,.7);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Instrument Serif',serif;font-size:1.3rem}
+.cta-nav{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#fff;padding:.55rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:.88rem}
+.hero{min-height:85vh;display:flex;align-items:center;padding:8rem 2rem 4rem;background:radial-gradient(ellipse at top,rgba(255,107,53,.15),transparent 60%),linear-gradient(180deg,#0f1218,#0a0c10)}
+.hero-inner{max-width:1100px;margin:0 auto;width:100%}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:1rem}
+h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.02;margin-bottom:1.2rem;letter-spacing:-.025em}
+.hero-sub{font-size:1.15rem;color:var(--ink-2);max-width:620px;margin-bottom:2rem;line-height:1.55}
+.hero-ctas{display:flex;gap:.85rem;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#fff;padding:1rem 2rem;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 10px 30px rgba(255,107,53,.35)}
+.btn-secondary{background:rgba(255,255,255,.05);color:var(--ink);padding:1rem 2rem;border-radius:10px;text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,.1)}
+.trust-row{display:flex;gap:2rem;margin-top:2.5rem;align-items:center;flex-wrap:wrap}
+.stars{font-size:1.05rem;color:#fbbf24}
+.review-count{font-size:.88rem;color:var(--ink-2)}
+section{padding:5rem 2rem;border-top:1px solid var(--line)}
+section .inner{max-width:1100px;margin:0 auto}
+h2{font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:1.4rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:2rem}
+.service{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:1.6rem}
+.service h3{font-size:1.15rem;font-weight:700;margin-bottom:.5rem}
+.service p{color:var(--ink-2);font-size:.95rem}
+.cta-card{background:radial-gradient(ellipse at top,rgba(255,107,53,.12),transparent),linear-gradient(180deg,rgba(15,18,24,.8),rgba(5,6,8,.9));border:1px solid rgba(255,107,53,.25);border-radius:22px;padding:3.5rem 2rem;text-align:center}
+footer{padding:3rem 2rem;border-top:1px solid var(--line);text-align:center;color:var(--ink-2);font-size:.88rem}
+footer a{color:var(--accent);text-decoration:none}
+
+/* Chatbot widget */
+#chatbot-toggle{position:fixed;right:24px;bottom:24px;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-deep));border:none;cursor:pointer;box-shadow:0 10px 30px rgba(255,107,53,.4);display:flex;align-items:center;justify-content:center;z-index:1000;transition:transform .25s}
+#chatbot-toggle:hover{transform:scale(1.08)}
+#chatbot-toggle svg{width:28px;height:28px;color:#fff}
+#chatbot-window{position:fixed;right:24px;bottom:100px;width:380px;height:520px;background:#0f1218;border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.5);display:none;flex-direction:column;overflow:hidden;z-index:1000}
+#chatbot-window.open{display:flex}
+.chatbot-head{padding:1rem 1.2rem;background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#fff;font-weight:700}
+.chatbot-head small{display:block;font-weight:400;font-size:.78rem;opacity:.85;margin-top:2px}
+.chatbot-body{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.55rem}
+.chat-msg{max-width:80%;padding:.6rem .9rem;border-radius:14px;font-size:.9rem;line-height:1.4}
+.chat-msg.bot{background:rgba(255,255,255,.08);align-self:flex-start;border-bottom-left-radius:4px}
+.chat-msg.user{background:linear-gradient(135deg,var(--accent),var(--accent-deep));color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.chatbot-input{padding:.8rem;border-top:1px solid var(--line);display:flex;gap:.5rem}
+.chatbot-input input{flex:1;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--ink);padding:.65rem .9rem;border-radius:10px;font-family:inherit;font-size:.9rem}
+.chatbot-input button{background:var(--accent);border:none;color:#fff;padding:0 1rem;border-radius:10px;cursor:pointer;font-weight:600}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">El Manzanillo</div>
+  <a href="#contact" class="cta-nav">Message us →</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Blairsville, NJ · Restaurants</div>
+    <h1>Come hungry.<br>Leave a regular.</h1>
+    <p class="hero-sub">Local, reliable, and a message away. Serving Blairsville and the surrounding NJ area.</p>
+    <div class="hero-ctas">
+      <a href="javascript:void(0)" onclick="document.getElementById('chatbot-toggle').click();return false;" class="btn-primary">Open chat</a>
+      <a href="#contact" class="btn-secondary">Get a Quote</a>
+    </div>
+    <div class="trust-row">
+      <div><span class="stars">★★★★★</span> <span class="review-count">4.7 · 25 reviews on Google</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <h2>What we do</h2>
+    <div class="services-grid">
+            <div class="service"><h3>Dine In</h3><p>Available for clients in Blairsville and nearby.</p></div>
+      <div class="service"><h3>Takeout</h3><p>Available for clients in Blairsville and nearby.</p></div>
+      <div class="service"><h3>Catering</h3><p>Available for clients in Blairsville and nearby.</p></div>
+      <div class="service"><h3>Private Events</h3><p>Available for clients in Blairsville and nearby.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="inner">
+    <div class="cta-card">
+      <h2>Questions? Call us or ask the assistant.</h2>
+      <p style="color:var(--ink-2);max-width:540px;margin:0 auto 1.8rem;font-size:1.05rem">Fastest answers come from the chat bubble below — it's trained on our services, hours, and pricing. For urgent matters, call direct.</p>
+      <a href="javascript:void(0)" onclick="document.getElementById('chatbot-toggle').click();return false;" class="btn-primary">Open chat</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><strong>El Manzanillo</strong> · Blairsville, NJ</p>
+  <p style="margin-top:.4rem">📞 <span class="muted">Message via chat →</span> · <a href="">View on Google Maps</a></p>
+</footer>
+
+<!-- Chatbot widget -->
+<button id="chatbot-toggle" aria-label="Open chat">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</button>
+<div id="chatbot-window">
+  <div class="chatbot-head">El Manzanillo Assistant <small>Powered by AI · answers 24/7</small></div>
+  <div class="chatbot-body" id="chat-body"></div>
+  <form class="chatbot-input" id="chat-form">
+    <input type="text" id="chat-input" placeholder="Ask anything…" autocomplete="off">
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script>
+(function(){
+  const CHATBOT_CONFIG={businessId:"",businessName:"El Manzanillo",category:"restaurants",phone:"",endpoint:"/api/chat"};
+  const toggle=document.getElementById('chatbot-toggle'),win=document.getElementById('chatbot-window'),body=document.getElementById('chat-body'),form=document.getElementById('chat-form'),input=document.getElementById('chat-input');
+  function addMsg(text,who){const d=document.createElement('div');d.className='chat-msg '+who;d.textContent=text;body.appendChild(d);body.scrollTop=body.scrollHeight}
+  toggle.addEventListener('click',()=>{win.classList.toggle('open');if(win.classList.contains('open')&&!body.children.length){addMsg(`Hi! I'm the ${CHATBOT_CONFIG.businessName} assistant. Ask me about hours, services, booking, pricing — I'm trained on everything here.`,'bot')}});
+  form.addEventListener('submit',async(e)=>{e.preventDefault();const q=input.value.trim();if(!q)return;addMsg(q,'user');input.value='';addMsg('…','bot');try{const r=await fetch(CHATBOT_CONFIG.endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({businessId:CHATBOT_CONFIG.businessId,message:q})});const d=await r.json();body.lastChild.textContent=d.reply||"I'll get right back to you — call "+CHATBOT_CONFIG.phone+" for faster service.";}catch(err){body.lastChild.textContent="Connection hiccup — try calling "+CHATBOT_CONFIG.phone}});
+})();
+</script>
+</body>
+</html>
